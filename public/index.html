@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudsMudd Scouting | Pakistan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>STUDS<span>MUDD</span></h1></header>
+
+    <div class="container">
+        <nav id="player-buttons" class="player-nav">
+            <button onclick="showPlayer('diyan', this)">Diyan</button>
+            <button onclick="showPlayer('saif', this)">Saif</button>
+            <button onclick="showPlayer('qaiser', this)">Qaiser</button>
+            <button onclick="showPlayer('shaviyan', this)">Shaviyan</button>
+        </nav>
+
+        <div class="card">
+            <h2 id="p-name">Select Prospect</h2>
+            <p id="p-role">Scouting Category</p>
+            <div id="video-grid" class="video-grid"></div>
+        </div>
+
+        <section id="admin-gate" class="admin">
+            <h3>Staff Access</h3>
+            <input type="password" id="pass" placeholder="Password (ankara...)">
+            <button onclick="checkPass()">Unlock Admin</button>
+        </section>
+
+        <section id="admin-tools" class="admin" style="display:none">
+            <h3>Dashboard: Save to Folders</h3>
+            <select id="sel-player">
+                <option value="diyan">Diyan</option>
+                <option value="saif">Saif</option>
+                <option value="qaiser">Qaiser</option>
+                <option value="shaviyan">Shaviyan</option>
+            </select>
+            <input type="file" id="vid-file" accept="video/*">
+            <input type="text" id="vid-label" placeholder="Clip Title (e.g. Tackle vs Lyari)">
+            <button class="btn-save" onclick="serverUpload()">SAVE TO FOLDER</button>
+            <p id="up-status"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
